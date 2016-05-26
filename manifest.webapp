@@ -1,0 +1,31 @@
+{
+  "version": "0.1.0",
+  "name": "Rainfall radar: Slovenia",
+  "description": "Radar image of rainfall in Slovenia",
+  "launch_path": "/index.html",
+  "icons": {
+    "48": "/img/icons/icon48x48.png",
+    "60": "/img/icons/icon60x60.png",
+    "128": "/img/icons/icon128x128.png"
+  },
+  "developer": {
+    "name": "elnino.si",
+    "url": "http://elnino.si"
+  },
+  "locales": {
+    "en": {
+      "name": "Rainfall radar: Slovenia",
+      "description": "Radar image of rainfall in Slovenia"
+    },
+      "sl": {
+      "name": "Radarska slika padavin: Slovenija",
+      "description": "Radarska slika padavin na območju Slovenije"
+    },
+      "hr": {
+      "name": "Radarska slika oborina: Slovenija",
+      "description": "Radarska slika oborina u Sloveniji"
+    }
+     
+  },
+  "default_locale": "sl"
+}

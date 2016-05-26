@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Rainfall radar: Slovenia</title>
+        <meta name="description" content="Radar image of rainfall in Slovenia">
+
+        <!--
+          viewport allows you to control how mobile browsers will render your content.
+          width=device-width tells mobile browsers to render your content across the
+          full width of the screen, without being zoomed out (by default it would render
+          it at a desktop width, then shrink it to fit.)
+          Read more about it here:
+          https://developer.mozilla.org/Mozilla/Mobile/Viewport_meta_tag
+        -->
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="css/app.css">
+       <link rel="stylesheet" href="css/header.css">
+        <link rel="resource" type="application/l10n" href="data/locales.ini" >
+        <!--
+        Inline JavaScript code is not allowed for privileged and certified apps,
+        due to Content Security Policy restrictions.
+        You can read more about it here: https://developer.mozilla.org/Apps/CSP
+        Plus keeping your JavaScript separated from your HTML is always a good practice!
+
+        We're also using the 'defer' attribute. This allows us to tell the browser that
+        it should not wait for this file to load before continuing to load the rest of
+        resources in the page. Then, once everything has been loaded, it will parse and
+        execute the deferred files.
+        Read about defer: https://developer.mozilla.org/Web/HTML/Element/script#attr-defer
+        -->
+        <script type="text/javascript" src="js/app.js" defer></script>
+
+        <!--
+        The following two lines are for loading the localisations library
+        and the localisation data-so people can use the app in their
+        own language (as long as you provide translations).
+        -->
+        <link rel="prefetch" type="application/l10n" href="data/locales.ini" />
+        <script type="text/javascript" src="js/libs/l10n.js" defer></script>
+        
+        
+        <script type="text/javascript">
+            function showImage(imgName) {
+                 document.getElementById('largeImg').src = imgName;
+                 showLargeImagePanel();
+                 unselectAll();
+             }
+             function showLargeImagePanel() {
+                 document.getElementById('largeImgPanel').style.visibility = 'visible';
+            }
+            function unselectAll() {
+                 if(document.selection) document.selection.empty();
+                 if(window.getSelection) window.getSelection().removeAllRanges();
+             }
+             function hideMe(obj) {
+                 obj.style.visibility = 'hidden';
+                 location.reload();
+             }
+            
+            
+            
+            
+         </script>
+ 
+         <style type="text/css">
+             #largeImgPanel {
+                 text-align: center;
+                 visibility: hidden;
+                 position: absolute;
+                 z-index: 100;
+                 top: 0; left: 0; width: 100%; height: 100%;
+                 background-color: rgba(100,100,100, 0.5);
+                 border-radius: 2.5px;
+             }
+        </style>
+    
+        <link href='http://fonts.googleapis.com/css?family=Roboto:700italic,700' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        
+        <section role="region">
+            <header>
+                
+                <menu type="toolbar">
+                     <button onclick="window.close()";><span class="icon icon-close">close</span></button>
+                </menu>
+                <h1 id="headtext" data-l10n-id="headtext">headtext</h1>
+                
+            </header>
+        </section>
+        
+        
+    <p>
+        <img src="http://www.arso.gov.si/vreme/napovedi%20in%20podatki/radar.gif" style="border-radius: 2.5px;" border="0" height="100%" width="100%" style="cursor:pointer" onclick="showImage('http://www.arso.gov.si/vreme/napovedi%20in%20podatki/radar_anim.gif');" />
+        
+ 
+         <div id="largeImgPanel" onclick="hideMe(this);">
+             <img id="largeImg" style=" margin: 0; padding: 0;" />
+             
+        </div>
+        
+    </p>
+    
+    
+    
+    <section id="note" role="status">
+            <p class= note id="note" data-l10n-id="note"></p>
+        </section>
+    
+    <section id="besedilo" role="status">
+            <p class="besedilo" id="besedilo" data-l10n-id="besedilo"></p>
+        </section>
+            
+	</script>
+    </body>
+</html>
